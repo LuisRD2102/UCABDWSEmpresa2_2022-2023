@@ -12,8 +12,8 @@ using ServicesDeskUCABWS.Data;
 namespace ServicesDeskUCABWS.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221122155457_MigracionInicial")]
-    partial class MigracionInicial
+    [Migration("20221127200610_PruebaDevelop")]
+    partial class PruebaDevelop
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -156,8 +156,7 @@ namespace ServicesDeskUCABWS.Migrations
 
                     b.Property<string>("nombre")
                         .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
